@@ -1,15 +1,22 @@
 <?php
-// Configuración por defecto de XAMPP
+// Nombre del servidor local
 $host = "localhost";
-$usuario = "root";   // En XAMPP el usuario por defecto es "root"
-$password = "";      // En XAMPP la contraseña por defecto está vacía
+
+// Usuario por defecto de XAMPP
+$usuario = "root";
+
+// Contraseña (vacía en XAMPP)
+$password = "";
+
+// Nombre de la base de datos
 $bd = "kickstore_db";
 
-// Crear conexión con MySQL
+// Crear la conexión a MySQL
 $conexion = new mysqli($host, $usuario, $password, $bd);
 
-// Comprobar la conexión
+// Verificar si hubo error al conectar
 if ($conexion->connect_error) {
+    // Detener script y mostrar error
     die("Error de conexión a la base de datos: " . $conexion->connect_error);
 }
 ?>
