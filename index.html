@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KICKSTORE - Tienda de Tenis</title>
+</head>
+<body style="background-color: #0a0a0a; color: #ffffff; line-height: 1.6; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+  <!-- Encabezado -->
+  <header style="background-color: #121212; border-bottom: 2px solid #ff6b00; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
+    <div style="font-size: 24px; font-weight: bold; color: #ff6b00;">KICKSTORE</div>
+    <div>
+      <a href="login.html" style="background-color: #ff6b00; color: #ffffff; border: none; padding: 8px 16px; margin-left: 10px; cursor: pointer; border-radius: 4px; font-weight: bold; text-decoration: none; display: inline-block;">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <div style="max-width: 1100px; margin: 20px auto; padding: 0 20px;">
+
+    <!-- Catálogo -->
+    <h2 style="color: #ff6b00; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 20px;">Catálogo de Tenis</h2>
+    <div style="margin-bottom: 25px;">
+      <button style="background-color: #1f1f1f; color: #ff6b00; border: 1px solid #ff6b00; padding: 10px 20px; border-radius: 4px; font-weight: bold; cursor: default;">Todos los productos</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      
+      <!-- Producto 1 -->
+      <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; text-align: center;">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Nike Air Max 270" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 10px;">
+        <h3 style="font-size: 16px; margin-bottom: 5px;">Nike Air Max 270</h3>
+        <div style="color: #ff6b00; font-size: 18px; font-weight: bold; margin: 8px 0;">$150 USD</div>
+        
+        <form action="procesar_compra.php" method="POST">
+          <input type="hidden" name="producto" value="Nike Air Max 270">
+          <input type="hidden" name="precio" value="150.00">
+          
+          <select name="talla" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 6px; font-size: 12px;">
+            <option value="">Selecciona Talla</option>
+            <option value="25 MX">25 MX / 7 US</option>
+            <option value="26 MX">26 MX / 8 US</option>
+            <option value="27 MX">27 MX / 9 US</option>
+            <option value="28 MX">28 MX / 10 US</option>
+          </select>
+
+          <select name="color" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 10px; font-size: 12px;">
+            <option value="">Selecciona Color</option>
+            <option value="Negro/Naranja">Negro / Naranja</option>
+            <option value="Blanco/Rojo">Blanco / Rojo</option>
+            <option value="Completamente Negro">Completamente Negro</option>
+          </select>
+
+          <button type="submit" style="background-color: #ff6b00; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold;">Comprar</button>
+        </form>
+      </div>
+
+      <!-- Producto 2 -->
+      <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; text-align: center;">
+        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=400" alt="Adidas Ultraboost" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 10px;">
+        <h3 style="font-size: 16px; margin-bottom: 5px;">Adidas Ultraboost</h3>
+        <div style="color: #ff6b00; font-size: 18px; font-weight: bold; margin: 8px 0;">$180 USD</div>
+        
+        <form action="procesar_compra.php" method="POST">
+          <input type="hidden" name="producto" value="Adidas Ultraboost">
+          <input type="hidden" name="precio" value="180.00">
+          
+          <select name="talla" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 6px; font-size: 12px;">
+            <option value="">Selecciona Talla</option>
+            <option value="25 MX">25 MX / 7 US</option>
+            <option value="26 MX">26 MX / 8 US</option>
+            <option value="27 MX">27 MX / 9 US</option>
+            <option value="28 MX">28 MX / 10 US</option>
+          </select>
+
+          <select name="color" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 10px; font-size: 12px;">
+            <option value="">Selecciona Color</option>
+            <option value="Negro/Naranja">Negro / Naranja</option>
+            <option value="Blanco/Gris">Blanco / Gris</option>
+            <option value="Azul Marino">Azul Marino</option>
+          </select>
+
+          <button type="submit" style="background-color: #ff6b00; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold;">Comprar</button>
+        </form>
+      </div>
+
+      <!-- Producto 3 -->
+      <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; text-align: center;">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400" alt="Air Jordan 1 Retro" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 10px;">
+        <h3 style="font-size: 16px; margin-bottom: 5px;">Air Jordan 1 Retro</h3>
+        <div style="color: #ff6b00; font-size: 18px; font-weight: bold; margin: 8px 0;">$200 USD</div>
+        
+        <form action="procesar_compra.php" method="POST">
+          <input type="hidden" name="producto" value="Air Jordan 1 Retro">
+          <input type="hidden" name="precio" value="200.00">
+          
+          <select name="talla" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 6px; font-size: 12px;">
+            <option value="">Selecciona Talla</option>
+            <option value="25 MX">25 MX / 7 US</option>
+            <option value="26 MX">26 MX / 8 US</option>
+            <option value="27 MX">27 MX / 9 US</option>
+            <option value="28 MX">28 MX / 10 US</option>
+          </select>
+
+          <select name="color" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 10px; font-size: 12px;">
+            <option value="">Selecciona Color</option>
+            <option value="Rojo/Negro">Rojo / Negro (Chicago)</option>
+            <option value="Negro/Naranja">Negro / Naranja (Shattered)</option>
+            <option value="Azul/Blanco">Azul / Blanco (Royal)</option>
+          </select>
+
+          <button type="submit" style="background-color: #ff6b00; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold;">Comprar</button>
+        </form>
+      </div>
+
+      <!-- Producto 4 -->
+      <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; text-align: center;">
+        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400" alt="Puma RS-X" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 10px;">
+        <h3 style="font-size: 16px; margin-bottom: 5px;">Puma RS-X</h3>
+        <div style="color: #ff6b00; font-size: 18px; font-weight: bold; margin: 8px 0;">$110 USD</div>
+        
+        <form action="procesar_compra.php" method="POST">
+          <input type="hidden" name="producto" value="Puma RS-X">
+          <input type="hidden" name="precio" value="110.00">
+          
+          <select name="talla" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 6px; font-size: 12px;">
+            <option value="">Selecciona Talla</option>
+            <option value="25 MX">25 MX / 7 US</option>
+            <option value="26 MX">26 MX / 8 US</option>
+            <option value="27 MX">27 MX / 9 US</option>
+            <option value="28 MX">28 MX / 10 US</option>
+          </select>
+
+          <select name="color" required style="width: 100%; padding: 6px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; margin-bottom: 10px; font-size: 12px;">
+            <option value="">Selecciona Color</option>
+            <option value="Multicolor/Naranja">Multicolor / Naranja</option>
+            <option value="Blanco/Negro">Blanco / Negro</option>
+          </select>
+
+          <button type="submit" style="background-color: #ff6b00; color: #fff; border: none; padding: 8px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold;">Comprar</button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+<center>
+  <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #121212; border-top: 1px solid #333; color: #888; text-align: center; padding: 10px 0; font-size: 13px;">
+    Axel Osmar Aguirre Ontiveros 5-i 0481
+  </footer>
+</center>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión / Registro - KICKSTORE</title>
+</head>
+<body style="background-color: #0a0a0a; color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+  <!-- Formulario de Registro / Login -->
+  <div style="background-color: #1a1a1a; border: 1px solid #ff6b00; padding: 25px; width: 360px; border-radius: 6px; box-sizing: border-box;">
+    
+    <h2 style="color: #ff6b00; margin-top: 0; margin-bottom: 20px; text-align: center;">Registro / Sesión</h2>
+    
+    <form action="procesar_login.php" method="POST">
+      
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #ccc;">Correo Electrónico:</label>
+        <input type="email" name="email" placeholder="ejemplo@correo.com" required style="width: 100%; padding: 10px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box;">
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #ccc;">Contraseña:</label>
+        <input type="password" name="password" placeholder="••••••••" required style="width: 100%; padding: 10px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box;">
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #ccc;">Tipo de Cuenta:</label>
+        <select name="tipo_cuenta" required style="width: 100%; padding: 10px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box;">
+          <option value="">Selecciona una opción</option>
+          <option value="Cliente VIP">Cliente VIP</option>
+          <option value="Mayorista">Mayorista</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; color: #ccc;">Código de Verificación / PIN:</label>
+        <input type="text" name="pin" placeholder="1234" maxlength="4" style="width: 100%; padding: 10px; background-color: #0a0a0a; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box;">
+      </div>
+
+      <div style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+        <label style="color: #ccc; font-size: 14px;">
+          <input type="checkbox" name="recordar" style="accent-color: #ff6b00; margin-right: 5px;"> Recordar mi cuenta
+        </label>
+        <a href="#" style="color: #ff6b00; font-size: 13px; text-decoration: none;">¿Olvidaste tu clave?</a>
+      </div>
+
+      <button type="submit" style="background-color: #ff6b00; color: #ffffff; border: none; padding: 10px; width: 100%; cursor: pointer; border-radius: 4px; font-weight: bold; margin-top: 10px;">Ingresar / Registrar</button>
+
+      <div style="margin-top: 15px; text-align: center;">
+        <a href="index.html" style="color: #aaa; font-size: 13px; text-decoration: none;">Volver a la Tienda</a>
+      </div>
+      
+    </form>
+  </div>
+<center>
+  <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #121212; border-top: 1px solid #333; color: #888; text-align: center; padding: 10px 0; font-size: 13px;">
+    Axel Osmar Aguirre Ontiveros 5-i 0481
+  </footer>
+</center>
+</body>
+</html>

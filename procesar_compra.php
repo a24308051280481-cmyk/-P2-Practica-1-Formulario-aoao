@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procesar Compra - KICKSTORE</title>
+</head>
+<body style="background-color: #0a0a0a; color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 90vh;">
+
+  <div style="background-color: #1a1a1a; border: 1px solid #ff6b00; padding: 25px; max-width: 450px; width: 100%; border-radius: 6px; box-sizing: border-box; text-align: center;">
+
+<?php
+include('conexion.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $producto = $_POST['producto'];
+    $precio   = $_POST['precio'];
+    $talla    = $_POST['talla'];
+    $color    = $_POST['color'];
+
+    // Insertar compra con especificaciones en SQL
+    $sql = "INSERT INTO compras (producto, precio, talla, color) 
+            VALUES ('$producto', '$precio', '$talla', '$color')";
+
+    if ($conexion->query($sql) === TRUE) {
+        echo "<h2 style='color: #00ff66; margin-top: 0;'>¡Compra Registrada en SQL!</h2>";
+        echo "<p style='color: #ccc;'>Producto: <strong style='color: #ff6b00;'>" . htmlspecialchars($producto) . "</strong></p>";
+        echo "<p style='color: #ccc;'>Precio: <strong>$" . $precio . " USD</strong></p>";
+        echo "<p style='color: #ccc;'>Talla seleccionada: <strong>" . htmlspecialchars($talla) . "</strong></p>";
+        echo "<p style='color: #ccc;'>Color seleccionado: <strong>" . htmlspecialchars($color) . "</strong></p>";
+    } else {
+        echo "<h2 style='color: #ff4444;'>Error al procesar la compra</h2>";
+        echo "<p>" . $conexion->error . "</p>";
+    }
+}
+
+$conexion->close();
+?>
+
+    <div style="margin-top: 25px;">
+      <a href="index.html" style="background-color: #ff6b00; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">Volver a la Tienda</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
